@@ -3,11 +3,18 @@
   "policy": "Public repository Chain-Love/chain-love only. One pinned branch per run; this file contains no credentials.",
   "submissions": [
     {
-      "enabled": true,
+      "enabled": false,
       "branch": "data/3xpl-official-api-docs-20261008",
       "expected_head_sha": "96edca68cb6abcbc91c4068fbec46095972060c7",
       "title": "data(providers): link official 3xpl JSON API documentation",
       "body": "## Summary\n\nAdd 3xpl's official JSON API documentation to its existing provider record.\n\n- Provider: `3xpl`\n- Field: `docs` (previously blank)\n- URL: https://3xpl.com/data/json-api\n- File: `references/providers/providers.csv`\n- Exactly one provider field is changed.\n\n## Type of change\n\n- [x] Update data rows\n\n## Scope\n\n- Existing Avalanche explorer listing: `listings/specific-networks/avalanche/explorers.csv`\n- No new provider, offer, or network-support claim.\n\n## First-party sources\n\n- https://3xpl.com/\n- https://3xpl.com/data/json-api\n- https://3xpl.com/avalanche\n\n## Optional\n\nRewards address (Ethereum Mainnet): `0x897681c19c239b029fffde764d0d005fcd5d1f2d`"
+    },
+    {
+      "enabled": true,
+      "branch": "data/transporter-official-help-20261010",
+      "expected_head_sha": "0b86c49e6e897d9420140e44088ab8272def02cc",
+      "title": "data(providers): link official Transporter getting-started documentation",
+      "body": "## Summary\n\nAdd Transporter's official getting-started documentation to its existing provider entry.\n\n- Provider: `transporter`\n- File: `references/providers/providers.csv`\n- Field: `docs` (previously blank)\n- Official documentation: https://www.transporter.io/help/category/getting-started\n- Scope: exactly one non-null provider metadata field added.\n\n## Bounty relevance and validation\n\n- Transporter is already listed in `listings/specific-networks/avalanche/bridges.csv` and documentation explicitly includes Avalanche.\n- Avalanche bounty eligibility starts October 10, 2026 (Chain.Love discussion #41).\n- First-party documentation page was checked live October 11, 2026.\n- Compared `Chain-Love/chain-love:main` with `Pepper-46:data/transporter-official-help-20261010`: exactly one commit and one CSV file modified.\n- Not a new provider, listing, network, or pricing claim.\n- No exact duplicate Transporter `docs` PR identified in GitHub search.\n\n## Rewards\n\nPublic Ethereum Mainnet address: `0x897681c19c239b029fffde764d0d005fcd5d1f2d`\n\nPrepared with AI assistance; official docs and single-field diff verified."
     }
   ]
 }
