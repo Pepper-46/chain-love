@@ -1,0 +1,29 @@
+name: MONETIZADOR - publicar PR verificados
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+
+# This job never executes code from a candidate branch.
+permissions:
+  contents: read
+
+concurrency:
+  group: monetizador-verified-pr-submissions
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'Pepper-46/chain-love' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout trusted default branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Submit one pinned PR if secret is configured
+        env:
+          MONETIZADOR_PR_TOKEN: ${{ secrets.MONETIZADOR_PR_TOKEN }}
+        run: python3 .github/monetizador/submit_pr.py
