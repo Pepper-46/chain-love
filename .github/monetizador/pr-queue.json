@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "policy": "Public repository Chain-Love/chain-love only. One pinned branch per run; this file contains no credentials.",
+  "submissions": [
+    {
+      "enabled": true,
+      "branch": "data/3xpl-official-api-docs-20261008",
+      "expected_head_sha": "96edca68cb6abcbc91c4068fbec46095972060c7",
+      "title": "data(providers): link official 3xpl JSON API documentation",
+      "body": "## Summary\n\nAdd 3xpl's official JSON API documentation to its existing provider record.\n\n- Provider: `3xpl`\n- Field: `docs` (previously blank)\n- URL: https://3xpl.com/data/json-api\n- File: `references/providers/providers.csv`\n- Exactly one provider field is changed.\n\n## Type of change\n\n- [x] Update data rows\n\n## Scope\n\n- Existing Avalanche explorer listing: `listings/specific-networks/avalanche/explorers.csv`\n- No new provider, offer, or network-support claim.\n\n## First-party sources\n\n- https://3xpl.com/\n- https://3xpl.com/data/json-api\n- https://3xpl.com/avalanche\n\n## Optional\n\nRewards address (Ethereum Mainnet): `0x897681c19c239b029fffde764d0d005fcd5d1f2d`"
+    }
+  ]
+}
